@@ -7,7 +7,7 @@
     then the formula is 1/|omega| * sum (x,y) ∈ omega (I(x,y))
     We apply this formula to a gray scale image
 """
-import cv2 as cv
+#import cv2 as cv
 
 
 
@@ -21,16 +21,16 @@ def imageMean(grayScaleImage):
             summatory += grayScaleImage[y][x]
     return round(summatory / omega, 2)
 
-doctorWhoImage = cv.imread("photos/doctor.jpg");
+#doctorWhoImage = cv.imread("photos/doctor.jpg");
 
 
-doctorWhoImageGrayScale = cv.cvtColor(doctorWhoImage, cv.COLOR_BGR2GRAY);
+#doctorWhoImageGrayScale = cv.cvtColor(doctorWhoImage, cv.COLOR_BGR2GRAY);
 
-doctorWhoImageMean = imageMean(doctorWhoImageGrayScale);
-stringWithTheMean = "The mean of this image is: " + str(doctorWhoImageMean)
+#doctorWhoImageMean = imageMean(doctorWhoImageGrayScale);
+#stringWithTheMean = "The mean of this image is: " + str(doctorWhoImageMean)
 
 """ puting text with the values of the mean in the image """
-cv.putText(doctorWhoImageGrayScale, stringWithTheMean, (50,50), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2);
+#cv.putText(doctorWhoImageGrayScale, stringWithTheMean, (50,50), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2);
 
-cv.imshow("Doctor who", doctorWhoImageGrayScale);
-cv.waitKey(0);
+#cv.imshow("Doctor who", doctorWhoImageGrayScale);
+#cv.waitKey(0);
